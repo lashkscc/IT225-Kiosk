@@ -10,3 +10,4 @@ class ShoppingCart():
     
     def removeItem(self, cartItem):
         self.cartItems.remove(cartItem)
+ 

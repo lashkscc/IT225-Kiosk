@@ -8,7 +8,7 @@ class Item():
         self.weight = expWeight
         self.ppu = pricePerUnit
         self.alerts = AlertTags
-
+  
     def getPricePerUnit(self):
         return self.ppu
     

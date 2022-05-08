@@ -3,7 +3,7 @@ class Alert():
         self.tag = name
         self.details = details
         self.alertItems = []
-        
+         
     def getAlertTag(self):
         return self.tag
     
