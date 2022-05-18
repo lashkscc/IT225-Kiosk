@@ -19,10 +19,18 @@ class Kiosk():
         self.weight= float(input("Weight:"))
         return self.weight
 
-    def lockKiosk(self):
-        self.lock = True
+    def lockStatus(self):
+        return self.lock
 
-    def unlockKiosk(self):
-        self.lock=False
+    def setLock(self, status):
+        self.lock = status
 
+    def resetKiosk(self):
+        self.currentCustomer = 0;
+        self.scan = 0;
+        self.scale = 0;
+        self.lock = False;                
+
+    def __str__(self):
+        return (self.kioskID + ' ' + self.currentCustomer + ' ' + self.lock)
     
