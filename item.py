@@ -4,7 +4,7 @@ class Item():
         self.name = name
         self.weight = expWeight
         self.ppu = pricePerUnit
-        self.alerts = alertTags
+        self.alerts = [*alertTags]
   
     def getName(self):
         return self.name
@@ -30,4 +30,4 @@ class Item():
         self.alerts.remove(alertTag)
 
     def __str__(self):
-        return (self.barcode + ' ' + self.name + ' ' + self.isPricedByWeight(self) + ' ' + self.ppu)
+        return (str(self.barcode) + ' ' + self.name + ' ' + str(self.isPricedByWeight()) + ' ' + str(self.ppu) + ' ' + str(' '.join(self.alerts)))

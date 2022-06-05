@@ -8,7 +8,10 @@ class Kiosk():
 
     def getKioskID(self):
         return self.kioskID
-        
+
+    def getCurrentCustomer(self):
+        return self.currentCustomer
+
     def scanBarcode(self):
         #would be an interface for barcode scanning software
         self.scan = int(input("Barcode:"))
@@ -16,8 +19,8 @@ class Kiosk():
     
     def getWeight(self):
         #would be an interface for the kiosk's scale
-        self.weight= float(input("Weight:"))
-        return self.weight
+        self.scale= float(input("Weight:"))
+        return self.scale
 
     def lockStatus(self):
         return self.lock
@@ -32,5 +35,5 @@ class Kiosk():
         self.lock = False;                
 
     def __str__(self):
-        return (self.kioskID + ' ' + self.currentCustomer + ' ' + self.lock)
+        return (str(self.kioskID) + ' ' + str(self.currentCustomer) + ' ' + str(self.lock))
     
